@@ -1,0 +1,127 @@
+/*Navgation*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+.logo { 
+    display: block; 
+    height: 60px; 
+    width: 60px; 
+    
+}
+
+.header_1{
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    font-size: 18px;
+    text-align: right;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    display: inline;
+    padding-right: 10px;
+}
+
+
+nav a { 
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#underline {
+    text-decoration: underline;
+} 
+
+/*Header*/
+.header_2 { 
+    background-image: url('../image/color.JPG');
+    height: 550px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    border-top: 3px solid #50C7C7;
+    border-bottom: 3px solid #50C7C7;
+}
+
+.main {
+    color: black;
+    font-size: 40px; 
+    padding-top: 150px;
+    text-align: center; 
+
+}
+
+.main_2 { 
+    color:black; 
+    font-size: 25px;
+    text-align: center;
+}
+
+/*Content*/
+main { 
+    padding-top: 20px; 
+    font-size: 20px;
+} 
+
+.xunji { 
+    display: block;
+    position: relative;
+    width: 400px; 
+    height: 400px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project { 
+    display: block;
+    position: relative;
+    width: 500px; 
+    height: 315px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.group { 
+    display: block;
+    position: relative;
+    width: 500px; 
+    height: 293px; 
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.grid_index { 
+    display: grid; 
+    position: relative; 
+    justify-content: stretch;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto; 
+    padding-left: 50px; 
+    padding-right: 50px; 
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.project, .xunji, .group { 
+    border: 3px solid black; 
+    border-radius: 4%;
+}
+
+
+

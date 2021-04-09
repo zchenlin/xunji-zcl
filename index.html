@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="logo.png"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<title>💙💛寻己DiscoverSelf</title>
+</head>
+
+<body>
+<!-- Navigation -->
+<header class='header_1'>
+  <img src="image/logo.png" alt="logo" class="logo">
+  <nav>
+      <ul class="nav_links">
+        <li id= 'underline' class="nav_item"><a href="index.html">Home</a></li>
+        <li class="nav_item"><a href="member.html">Member</a></li>    
+        <li class="nav_item"><a href="career.html">Career</a></li>
+        <li class="nav_item"><a href="community.html">Community</a></li>
+      </ul>
+  </nav>
+</header>
+
+<!-- Header -->
+<header class='header_2'> 
+  <p class='main'>寻己 💙💛DiscoverSelf</p>
+  <p class='main_2'>Navigate around to learn more about us.</p>
+</header>
+
+
+
+<main>
+  <div class='grid_index'> 
+    <!-- Band Description -->
+    <div class='about'>
+      <h2 class="sec-title">ABOUT US</h2>
+      <p class="content">寻己Discover Self 成立于2019年秋天，初衷是为那些初入大学或有些迷茫的同学们提供一个从多方位寻找自己的兴趣爱好，让大家看到更多自己的可能性的小团体。去年，我们在六位mentors的指导下完成了一个consulting project，三位申请转学Ross的大一社员全部成功，并收获了包括采访，演讲，团队协作在内的很多软实力。
+        今年，在mentors毕业的情况下，六位原寻己成员组成了新的committee chairs，将这个承载了许多的社团延续了下去。我们根据自己对寻己这个词语的理解更新了社团模式，从Community和Career两个方面去寻找自己。
+      </p>
+    </div> 
+
+    <div class='img_1'>
+      <img src="image/xunji.JPG" class='xunji'>
+    </div>
+    <!-- Career Description -->
+    <div class='img_2'>
+      <img src="image/project.PNG" class='project'>
+  </div>
+
+    <div class='career'>
+        <h2 class="fir-title">CAREER</h2>
+        <p class="content">被疫情困在家里的你或许正在苦恼如何自己去探索未来的职业道路，又或许正在思考怎样在困难情况下也能点亮自己的新技能。在寻己，这一切让我们一起实现。本学期寻己的活动将以hands-on project的形式展开，你将会和小伙伴们在与专业相关的project实践中探索商业、科技、艺术等领域的无限可能，并创造出属于你们自己的成果！我们都希望大家能在寻己的project中发掘自己的兴趣，探索自己的潜能，并积累下在未来道路上的有用技能。
+        </p>
+        <div class="block-button" data-animation-role="button" data-alignment="center" data-button-size="medium">
+          <a href="change this.html" class="block-button-style" >OUR PROJECTS</a> 
+        </div>
+    </div>
+
+    
+
+    <!-- Community Description -->
+    <div class='community'>
+        <h2 class="fir-title">COMMUNITY</h2>
+        <p class="content">在2021Winter，寻己将会尽最大的努力让所有成员找到依靠和知己。因为疫情原因，冬季学期寻己所有的社交活动都将线上进行，但是寻己的committee chair在经过详细思考之后，有信心用独创的House System让大家不用见面也能建立友谊的基础。
+
+            说到House system, 熟悉的同学可能已经联想到了哈利波特里面充满归属感的分院帽。我们将会沿用里面的积分系统鼓励大家参加我们的活动，培养团队协作，良性竞争；此外，我们也会轮换选举House captain让尽可能多的队员锻炼，展示自己的领导力。
+            
+            不管是游戏战友，一起看比赛追星的同道中人，或者是未来一起出游的伙伴，我们将会积极举办不同类型的集体活动使每名成员都能在寻己建立真诚关系。
+        </p>
+        <div class="block-button" data-animation-role="button" data-alignment="center" data-button-size="medium">
+        <a href="change this.html" class="block-button-style"  >MEET THE MEMBERS</a>
+        </div>
+    </div>
+    
+    <div class='img_3'>
+        <img src="image/group.PNG" class='group'>
+    </div>
+
+  </div>
+</main>
+
+
+
+
+<div id="map"></div>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"   
+  async
+
+></script>
+<!-- Need to change API key-->
+
+<!-- Footer -->
+<footer class="home-footer">
+  <a href="https://www.instagram.com/discoverse1f/?hl=en"><i class="fa fa-instagram"></i></a>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("Home-slides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      const uluru = { lat: 42.278046, lng: -83.738220 };
+      // The map, centered at Uluru
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 8,
+        center: uluru,
+      });
+      // The marker, positioned at Uluru
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+    }
+  </script>
+
+</body>
+</html>
+
